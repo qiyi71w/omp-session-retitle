@@ -1,0 +1,24 @@
+{
+  "name": "omp-session-retitle",
+  "version": "0.1.0",
+  "description": "Manually regenerate OMP session titles from the current branch without changing the main conversation.",
+  "type": "module",
+  "license": "MIT",
+  "omp": { "extensions": ["./index.ts"] },
+  "exports": "./index.ts",
+  "files": ["index.ts", "src/", "TITLE_SYSTEM.md", "MANUAL_REFRESH.md", "README.md", "retitle.example.json", "docs/"],
+  "repository": { "type": "git", "url": "https://github.com/qiyi71w/omp-session-retitle.git" },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "test:smoke": "OMP_RETITLE_SMOKE=1 bun test test/runtime.test.ts",
+    "check": "bun run typecheck && bun test"
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-ai": "18.1.16",
+    "@oh-my-pi/pi-catalog": "18.1.16",
+    "@oh-my-pi/pi-coding-agent": "18.1.16",
+    "@types/bun": "^1.3.0",
+    "typescript": "~5.9.3"
+  }
+}

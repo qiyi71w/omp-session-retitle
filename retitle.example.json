@@ -1,0 +1,9 @@
+{
+  "model": null,
+  "reasoning": "off",
+  "maxInputChars": 24000,
+  "maxOutputTokens": 1024,
+  "timeoutMs": 60000,
+  "titleSystemPath": null,
+  "manualRefreshPath": "bundled"
+}
