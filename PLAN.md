@@ -48,7 +48,7 @@
 
 生产入口 `index.ts`；配置、标题策略、独立 OMP 请求、状态/undo 分别封装在 `src/config.ts`、`src/title-policy.ts`、`src/omp.ts`、`src/controller.ts`。四段规则保留为整理版 `TITLE_SYSTEM.md`，手动纠偏独立于 `MANUAL_REFRESH.md`；支持显式指定个人完整规则文件，没有修改全局规则。
 
-最终 `bun run check`：86 pass / 1 skip / 0 fail，类型检查通过。被默认跳过的 native smoke 单独指定 `/home/dev/.local/bin/omp` 执行：1 pass / 0 fail。共 87 个独立测试通过。打包 dry-run 成功，包清单没有开发测试夹具或用户配置。
+最终 `bun run check`：86 pass / 1 skip / 0 fail，类型检查通过。被默认跳过的 native smoke 单独指定本机安装的 `omp` 可执行文件执行：1 pass / 0 fail。共 87 个独立测试通过。打包 dry-run 成功，包清单没有开发测试夹具或用户配置。
 
 明确没有宣称：真实模型标题语义质量已验证、OAuth 多账号实测、保证不发生原生池重选、保证 prompt cache 命中、跨进程原子 CAS、磁盘故障完整事务回滚、真实 TUI Esc 手测、磁盘关闭再打开的 undo 恢复实测。上述限制均已写入安装与验证文档。
 
